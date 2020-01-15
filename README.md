@@ -11,6 +11,10 @@ URLs.
  As a user,
  So I can view my most-used websites,
  I want to view a list of bookmarks
+
+As a user,
+ So I can retrieve my most-used websites at a later date,
+ I want to to be able to store these websites 
  ```
 
  ## Domain Model
