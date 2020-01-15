@@ -45,3 +45,17 @@ CREATE DATABASE bookmark_manager;
 
 4. Run query in file 01_create_bookmarks_table.sql
 
+## TEST DATABASE SETUP
+
+```
+From the command line:
+
+psql postgres
+
+CREATE DATABASE "bookmark_manager_test";
+
+Use the SQL query saved in the file '01_create_bookmarks_table.sql' in db/migrations to create a bookmarks table:
+
+CREATE TABLE bookmarks(id SERIAL PRIMARY KEY, url VARCHAR(60);)
+
+```

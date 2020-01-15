@@ -14,6 +14,7 @@ class BookmarkManager < Sinatra::Base
       #"https://twitter.com/home"
     #]
     #bookmarks.join
+    p ENV 
     @bookmarks = Bookmark.all
     erb(:'bookmarks/index')
   end
