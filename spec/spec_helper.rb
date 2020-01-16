@@ -12,19 +12,19 @@
 # the additional setup, and require it from the spec files that actually need
 # it.
 #
-# See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
-ENV['ENVIRONMENT'] = 'test'
+
+ENV['RACK_ENV']='test'
+
 
 require File.join(File.dirname(__FILE__), '..', 'app.rb')
 require 'capybara'
 require 'capybara/rspec'
 require 'rspec'
-require 'setup_test_database'
+require 'setup_test_database' # similar to a web helper - essentially a method 
 
 
 Capybara.app = BookmarkManager
 
-ENV['RACK_ENV']='test'
 
 RSpec.configure do |config|
 

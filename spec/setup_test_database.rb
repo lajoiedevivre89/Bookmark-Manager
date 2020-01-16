@@ -1,5 +1,5 @@
 require 'pg'
-
+ # this needs to be modified
 def setup_test_database  # like a webhelper  
   connection = PG.connect(dbname: 'bookmark_manager_test')
   connection.exec("TRUNCATE TABLE bookmarks") # clear/destroy /wipe

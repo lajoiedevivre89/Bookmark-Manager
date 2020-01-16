@@ -1,5 +1,17 @@
+"Here is a list of your bookmarks:"
+
 <ul>
   <% @bookmarks.each do |bookmark| %>
     <li><%= bookmark %></li>
   <% end %>
 </ul>
+
+
+<p>Add bookmark: </p>
+<form action="/add_bookmark" method="post">
+  <%#<p>Insert title: </p>%>
+  <%#<input type="text" name="title"> %>
+  <p>Insert url: </p>
+  <input type="text" name="url"> 
+  <input type="submit" value="Add">
+</form>

@@ -4,17 +4,16 @@ require './lib/bookmark'
 class BookmarkManager < Sinatra::Base
   
   get '/' do
-    "Here is a list of your bookmarks:"
+    @bookmarks = Bookmark.all
+    erb(:'bookmarks/index')
+  end
+
+  post '/add_bookmark' do
+    @bookmark = Bookmark.create(params[:url])
+    redirect '/bookmarks'
   end
 
   get '/bookmarks' do
-    #bookmarks = [ 
-      #"https://www.bbc.co.uk/news",
-      #"https://www.youtube.com",
-      #"https://twitter.com/home"
-    #]
-    #bookmarks.join
-    p ENV 
     @bookmarks = Bookmark.all
     erb(:'bookmarks/index')
   end
