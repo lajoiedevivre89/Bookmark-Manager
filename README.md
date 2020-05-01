@@ -1,30 +1,30 @@
 # Bookmark Manager
 
-Week 4 Project - build a bookmark manager to store a collection of bookmarks as
+### Week 4 Project at Makers Academy.
+
+We were tasked with building a bookmark manager that stores a collection of bookmarks as
 URLs.
 
 
  
- ## User Stories
+## User Stories
 
  ```
  As a user,
  So I can view my most-used websites,
  I want to view a list of bookmarks
 
-As a user,
+ As a user,
  So I can retrieve my most-used websites at a later date,
  I want to to be able to store these websites 
  ```
 
- ## Domain Model
-
- 
 
 
- ## Database Setup
+ ## Databases Setup
 
- 1. Connect to psql 
+ * **Connect to psql:**
+
  ```
  brew install postgresql
 
@@ -33,33 +33,76 @@ As a user,
  psql postgres
  ```
 
- 2. Create the database using psql
+ * **Create the database and test database:**
 
-```
+development database:
+
+```html
 CREATE DATABASE bookmark_manager;
-
 ```
 
-3. Connect to the database
+test database:
 
+```html
+CREATE DATABASE bookmark_manager;
 ```
+
+Connect to the database
+
+```html
 \c bookmark_manager;
-
 ```
 
-4. Run query in file 01_create_bookmarks_table.sql
+Run the following migrations. which can be found in the db/migrations subfolder: 
 
-## TEST DATABASE SETUP
-
+```html
+ CREATE TABLE bookmarks(id SERIAL PRIMARY KEY, url VARCHAR(60));
 ```
-From the command line:
 
-psql postgres
+Repeat for the test database
 
-CREATE DATABASE "bookmark_manager_test";
+### How to use:
 
-Use the SQL query saved in the file '01_create_bookmarks_table.sql' in db/migrations to create a bookmarks table:
+**Clone this repository:**
 
-CREATE TABLE bookmarks(id SERIAL PRIMARY KEY, url VARCHAR(60);)
-
+```html
+git clone https://github.com/emilyjspencer/The_Book_Lounge.git
 ```
+
+**cd into the repo**
+
+**Run**
+
+```html
+bundle install
+```
+
+**Start the server:**
+
+```html
+rackup
+```
+
+**Go to localhost:9292**
+
+### How to run the tests:
+
+```html
+rspec
+```
+
+### Built with:
+
+* Ruby
+* Sinatra
+* HTML/CSS
+* SQL
+
+### Tested with:
+
+* RSpec
+* Capybara
+
+### What it looks like:
+
+
