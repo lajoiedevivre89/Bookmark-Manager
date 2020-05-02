@@ -66,7 +66,7 @@ Repeat for the test database
 **Clone this repository:**
 
 ```html
-git clone https://github.com/emilyjspencer/The_Book_Lounge.git
+git clone https://github.com/emilyjspencer/Bookmark-Manager.git
 ```
 
 **cd into the repo**
